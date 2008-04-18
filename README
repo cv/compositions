@@ -1,0 +1,7 @@
+== PureData and QuartzComposer experiments
+
+Some not-so-useful things I've been playing with. You'll need ReacTIVision[1], DarwiinRemote OSC[2], a Wiimote[3] and a compatible camera (iSight works fine for me).
+
+1: http://reactable.iua.upf.edu/?software
+2: http://code.google.com/p/darwiinosc/
+3: http://en.wikipedia.org/wiki/Wiimote

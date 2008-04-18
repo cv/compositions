@@ -1,0 +1,61 @@
+#N canvas 765 193 567 615 10;
+#X obj 104 542 dac~;
+#X obj 22 17 dumpOSC 9999;
+#X obj 22 42 route /wii/acc;
+#X obj 22 65 unpack f f f;
+#X obj 21 93 vsl 15 128 0 255 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 6325 1;
+#X obj 41 93 vsl 15 128 0 255 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 6275 1;
+#X obj 62 94 vsl 15 128 0 255 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 7520 1;
+#X obj 106 66 route /wii/orientation;
+#X obj 107 89 unpack f f;
+#X obj 110 120 vsl 15 128 -127 127 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 6121 1;
+#X obj 128 120 vsl 15 128 -127 127 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 5665 1;
+#X obj 85 288 + 127;
+#X obj 85 320 / 2;
+#X obj 70 353 mtof;
+#X obj 60 434 *~ 0.3;
+#X obj 17 387 phasor~;
+#X obj 159 289 + 127;
+#X obj 159 321 / 2;
+#X obj 144 354 mtof;
+#X obj 101 489 +~;
+#X obj 142 388 osc~;
+#X obj 163 423 cos~;
+#X obj 125 426 +~;
+#X obj 66 387 osc~;
+#X obj 42 412 +~;
+#X obj 132 462 *~ 0.3;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 7 0;
+#X connect 3 0 4 0;
+#X connect 3 1 5 0;
+#X connect 3 2 6 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 8 1 10 0;
+#X connect 9 0 11 0;
+#X connect 10 0 16 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 15 0;
+#X connect 13 0 23 0;
+#X connect 14 0 19 0;
+#X connect 15 0 24 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 0;
+#X connect 18 0 20 0;
+#X connect 19 0 0 0;
+#X connect 19 0 0 1;
+#X connect 20 0 21 0;
+#X connect 20 0 22 0;
+#X connect 21 0 22 1;
+#X connect 22 0 25 0;
+#X connect 23 0 24 1;
+#X connect 24 0 14 0;
+#X connect 25 0 19 1;
