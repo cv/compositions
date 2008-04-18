@@ -1,0 +1,21 @@
+#N canvas 725 158 195 236 10;
+#X obj 11 8 dumpOSC 60000;
+#X obj 11 40 route /note;
+#X obj 74 70 route /velocity;
+#X obj 41 155 pack f f;
+#X obj 41 185 noteout;
+#X obj 68 95 bng 15 250 50 0 empty empty empty 0 -6 0 10 -262144 -1
+-1;
+#X obj 22 125 f;
+#X obj 97 122 f;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 1 0 6 1;
+#X connect 1 1 2 0;
+#X connect 2 0 5 0;
+#X connect 2 0 7 1;
+#X connect 3 0 4 0;
+#X connect 5 0 7 0;
+#X connect 5 0 6 0;
+#X connect 6 0 3 0;
+#X connect 7 0 3 1;

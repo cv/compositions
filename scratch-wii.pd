@@ -1,0 +1,65 @@
+#N canvas 394 203 502 612 10;
+#X obj 12 57 unpack f f f;
+#X obj 26 88 vsl 15 128 0 255 0 0 empty empty x 4 -8 0 10 -262144 -1
+-1 6425 1;
+#X obj 46 88 vsl 15 128 0 255 0 0 empty empty z 4 -8 0 10 -262144 -1
+-1 6325 1;
+#X obj 66 88 vsl 15 128 0 255 0 0 empty empty y 4 -8 0 10 -262144 -1
+-1 7769 1;
+#X obj 108 102 vsl 15 128 -127 128 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 6553 1;
+#X obj 128 102 vsl 15 128 -127 128 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 5869 1;
+#X obj 93 57 route /wii/orientation;
+#X obj 93 79 unpack f f;
+#X obj 12 36 route /wii/acc;
+#X text 92 14 read packets from DarwiinRemote OSC;
+#X obj 69 566 dac~;
+#X obj 62 534 *~ 0.2;
+#X obj 52 509 bp~ 660 3;
+#X obj 58 373 *~ 0.5;
+#X obj 112 373 *~ 0.5;
+#X obj 90 405 +~;
+#X obj 125 464 sin~;
+#X obj 49 245 average 5;
+#X obj 121 247 average 5;
+#X obj 106 304 phasor~;
+#X obj 62 469 +~;
+#X obj 29 306 osc~;
+#X obj 32 337 cos~;
+#X obj 31 275 + 20;
+#X obj 112 275 mtof;
+#X obj 125 431 clip~ -1.1 1.1;
+#X obj 205 91 route /wii/button/a;
+#X obj 208 120 print;
+#X obj 12 15 dumpOSC 9999;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 0 2 3 0;
+#X connect 4 0 17 0;
+#X connect 5 0 18 0;
+#X connect 6 0 7 0;
+#X connect 6 1 26 0;
+#X connect 7 0 4 0;
+#X connect 7 1 5 0;
+#X connect 8 0 0 0;
+#X connect 8 1 6 0;
+#X connect 11 0 10 1;
+#X connect 11 0 10 0;
+#X connect 12 0 11 0;
+#X connect 13 0 15 0;
+#X connect 13 0 20 0;
+#X connect 14 0 15 1;
+#X connect 15 0 25 0;
+#X connect 16 0 20 1;
+#X connect 17 0 23 0;
+#X connect 18 0 24 0;
+#X connect 19 0 14 0;
+#X connect 20 0 12 0;
+#X connect 21 0 22 0;
+#X connect 22 0 13 0;
+#X connect 23 0 21 0;
+#X connect 24 0 19 0;
+#X connect 25 0 16 0;
+#X connect 26 0 27 0;
+#X connect 28 0 8 0;
