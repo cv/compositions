@@ -1,16 +1,19 @@
-h2. Binary Guitar
+The Binary Guitar
+-----------------
 
-Turns a Guitar Hero USB controller into a real instrument. Mac only.
+Turns a Guitar Hero USB controller into a real instrument. Mac only, for now. Demo: http://www.flickr.com/photos/cv/2399863051/
 
-h3. Ingredients
+Ingredients
+-----------
 
-- PureData [1]
-- Quartz Composer [2]
-- MidiPipe [3]
-- Xbox 360 Controller Driver [4]
-- GarageBand or other software that understands MIDI
+# PureData [1]
+# Quartz Composer [2]
+# MidiPipe [3]
+# Xbox 360 Controller Driver [4]
+# GarageBand or other software that understands MIDI
 
-h4. Running
+Running
+-------
 
 # Install everything
 # Open PD to MIDI.mipi in MidiPipe
