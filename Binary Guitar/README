@@ -1,0 +1,34 @@
+== Binary Guitar
+
+Turns a Guitar Hero USB controller into a real instrument. Mac only.
+
+You'll need:
+
+- PureData [1]
+- Quartz Composer [2]
+- MidiPipe [3]
+- Xbox 360 Controller Driver [4]
+- GarageBand or other software that understands MIDI
+
+To run:
+
+- Install everything
+
+- Open PD to MIDI.mipi in MidiPipe
+
+- Open Binary Guitar.pd in PureData
+
+- Go to Pure Data / Preferences / MIDI settings... and point the MIDI inputs and outputs to MidiPipe
+
+- Open Binary Guitar.qtz in Quartz Composer
+
+- Connect the X-Plorer Guitar. If everything's working correctly, the Quartz Composer viewer should be black (rather than a checkered pattern)
+
+- Open GarageBand, select your favourite virual instrument.
+
+- Rock on!
+
+1: http://puredata.info
+2: http://developer.apple.com/graphicsimaging/quartz/quartzcomposer.html
+3: http://www.apple.com/downloads/macosx/audio/midipipe.html
+4: http://tattiebogle.net/index.php/ProjectRoot/Xbox360Controller/OsxDriver
